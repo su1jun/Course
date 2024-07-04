@@ -1,0 +1,69 @@
+### 깃 기본
+git add .
+git commit -a -m "메시지"
+
+### 깃 공간
+원본 -> staging area -> repository
+
+### 깃 상태관리
+git status
+git restore
+
+### 깃 변경내용 확인
+git diff [커밋id] [커밋id]
+git difftool [커밋id] [커밋id]
+
+### 깃 로그내용 확인
+git log --graph --oneline --all
+
+### 깃 브랜치 관리
+- 3-way merge
+git switch main
+git merge 브랜치명 
+git branch -d 브랜치이름
+git branch -D 브랜치이름
+
+- rebase and merge
+git switch 새로운브랜치
+git rebase main
+git switch main
+git merge 새로운브랜치
+
+- squash and merge
+git switch main
+git merge --squash 브랜치명
+git commit -m '메세지'
+
+### 깃 내용복구
+git restore 파일명
+git restore --source 커밋아이디 파일명
+git restore --staged 파일명
+
+git revert 커밋아이디
+git reset --hard 커밋아이디
+git reset --soft 커밋아이디
+git reset --mixed 커밋아이디
+
+### 깃 레포관리
+git branch -M main
+git push -u 원격저장소주소 main
+git remote add origin 원격저장소주소
+git clone 원격저장소주소
+
+# git flow 전략
+---
+- main 브랜치
+- develop 브랜치 (개발용)
+- feature 브랜치 (develop에 기능추가용)
+- hotfix 브랜치 (main 브랜치 버그해결용)
+- 가끔 release 브랜치 (develop 브랜치를 main 브랜치에 합치기 전에 최종 테스트용)
+
+## 혹은
+---
+- feature 브런치만 추가
+
+### 깃 변경내용
+git stash
+git stash save "메모"
+git stash list
+git stash pop
