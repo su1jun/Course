@@ -15,18 +15,19 @@
     width: 30%;
     height: 400px;
     background: aqua;
-    display: inline-block;
-    vertical-align: top;
+    float: left;
 }
 
 .right {
     width: 70%;
     height: 400px;
     background: coral;
+    float: right;
 }
 
 .footer {
     width: 100%;
     height: 100px;
     background: antiquewhite;
+    clear: both;
 }
